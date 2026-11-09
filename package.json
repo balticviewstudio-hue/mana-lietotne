@@ -1,0 +1,29 @@
+{
+  "name": "mana-lietotne",
+  "version": "1.0.0",
+  "description": "Mana pirmā datora lietotne",
+  "author": "Es",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "lv.mana.lietotne",
+    "productName": "Mana lietotne",
+    "directories": { "output": "dist" },
+    "files": ["main.js", "index.html", "package.json"],
+    "win": { "target": "nsis" },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "artifactName": "Mana-Lietotne-Instalators.${ext}"
+  }
+}
